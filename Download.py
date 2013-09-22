@@ -14,7 +14,7 @@ while(name_data != alb):
 	name_data = decoded_data[i]['name']
 alb_id_f = decoded_data[i]['id']
 song_content_url = 'https://www.sdslabs.co.in/muzi/ajax/album/?id=%d' % int(alb_id_f)
-print song_content_url
+#print song_content_url
 album_url = urllib2.urlopen(song_content_url).read()
 decoded_data_album = json.loads(album_url)
 print decoded_data_album['tracks'][0]['id']
