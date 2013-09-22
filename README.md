@@ -1,12 +1,19 @@
 MuziD
 =====
 Muzi is IIT Roorkee's online music player,
+
 Here's some python scripts to download songs from this player.
+
 eg
+
 HpC:$ python Okay.py 
+
 Enter album name(It is case sensitive)
+
 Saxobeats
+
 https://www.sdslabs.co.in/muzi/ajax/album/?id=13445
+
 133176
 0  Mr. Saxobeat
 1  Ting-Ting
