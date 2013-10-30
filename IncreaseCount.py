@@ -10,6 +10,7 @@ print "Connected\n"
 alb = raw_input("Enter album name(It is case sensitive)\n")
 #alb = 'Speak Now'
 
+print "Getting Song list"
 decoded_data = json.loads(url_is)
 i = 0 
 name_data = decoded_data[i]['name']
@@ -41,5 +42,6 @@ i =0
 print "Started...."
 for i in range(0,int(count)):
 	requests.get(increaseCount_url)
-	print "%d requests sent." % i+1
+	print "%d requests sent." % int(i+1)
+	i = i + 1
 print "count has been increased by %d time\n" % int(count)
