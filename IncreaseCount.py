@@ -34,12 +34,12 @@ input_num = raw_input("Choose song \n")
 
 songmain_id = decoded_data_album['tracks'][int(input_num)]['id']
 increaseCount_url = 'https://sdslabs.co.in/muzi/ajax/track/log.php?id=%d' % int(songmain_id)
-count = raw_input("Increase count By")
+count = raw_input("Increase count By\n")
 #count = 10
 
 i =0
 print "Started...."
 for i in range(0,int(count)):
 	requests.get(increaseCount_url)
-	print "%d requests sent." % i
+	print "%d requests sent." % i+1
 print "count has been increased by %d time\n" % int(count)
