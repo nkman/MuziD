@@ -32,7 +32,8 @@ increaseCount_url = 'https://sdslabs.co.in/muzi/ajax/track/log.php?id=%d' % int(
 count = raw_input("Increase count By")
 #count = 10
 i =0
-for i in range(0,count):
+print "Started...."
+for i in range(0,int(count)):
 	requests.get(increaseCount_url)
 
-print "count has been increased by %d time" % int(count)
+print "count has been increased by %d time " % int(count)
