@@ -13,7 +13,7 @@ while(name_data != alb):
 	i = i+1
 	name_data = decoded_data[i]['name']
 alb_id_f = decoded_data[i]['id']
-song_content_url = 'https://www.sdslabs.co.in/muzi/ajax/album/?id=%d' % int(alb_id_f)
+song_content_url = 'https://www.sdslabs.co.in/muzi/ajax/album/?id='+str(alb_id_f)
 #print song_content_url
 album_url = urllib2.urlopen(song_content_url).read()
 decoded_data_album = json.loads(album_url)
@@ -26,7 +26,7 @@ while(i < vi):
 	i = i + 1
 input_num = raw_input("Choose song \n")
 songmain_id = decoded_data_album['tracks'][int(input_num)]['id']
-songmain_url = 'http://www.sdslabs.co.in/muzi/ajax/track?id=%d' % int(songmain_id)
+songmain_url = 'http://www.sdslabs.co.in/muzi/ajax/track?id='+str(songmain_id)
 got = urllib2.urlopen(songmain_url).read()
 dcode_got = json.loads(got)
 last_song = dcode_got['file']
